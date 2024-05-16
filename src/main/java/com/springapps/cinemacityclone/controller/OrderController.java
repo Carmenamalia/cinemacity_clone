@@ -43,7 +43,7 @@ public class OrderController {
         return ResponseEntity.ok(orderCinemas);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Movie deleteOrderCinemaById(@PathVariable Long id) {
+    public ResponseEntity<Movie> deleteOrderCinemaById(@PathVariable Long id) {
         orderService.deleteOrderById(id);
         return ResponseEntity.noContent().build();
     }
